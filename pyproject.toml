@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "fastgrpc"
+version = "0.1.0"
+description = "Simplified gRPC services with Pydantic and Python typing"
+authors = ["ProtoPynon <protopynon@proton.me>"]
+readme = "README.md"
+homepage = "https://github.com/ProtoPynon/fastgrpc"
+license = "MIT"
+keywords = ["grpc", "pydantic", "fastgrpc", "proto"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+grpcio-tools = "^1.68.1"
+grpcio = "^1.68.1"
+pydantic = "^2.10.2"
+stringcase = "^1.2.0"
+python2proto = "^0.0.1"
+
+[tool.poetry.urls]
+Documentation = "https://github.com/ProtoPynon/fastgrpc#readme"
+Source = "https://github.com/ProtoPynon/fastgrpc"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

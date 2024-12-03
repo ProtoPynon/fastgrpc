@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastgrpc-simple-example"
+version = "0.1.0"
+description = ""
+authors = ["Jacob Valdez <jacobfv123@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "fastgrpc_simple_example", from = "."}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastgrpc = {path = "../.."}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

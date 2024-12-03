@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package fastgrpc;
+
+message GreetResponse {
+    string message = 1;;
+    int32 greeting_count = 2;;
+}
+
+message add_Request {
+    int32 a = 1;;
+    int32 b = 2;;
+}
+
+message greet_defined_with_type_annotation_Request {
+    GreetRequest request = 1;;
+}
+
+message GreetRequest {
+    string name = 1;;
+    string title = 2;;
+}
+
+message add_Response {
+    int32 result = 1;;
+}
+
+service Calculator {
+  rpc add (add_Request) returns (add_Response);
+  rpc greet_defined_with_type_annotation (greet_defined_with_type_annotation_Request) returns (GreetResponse);
+  rpc greet_defined_with_decorator (GreetRequest) returns (GreetResponse);
+}
